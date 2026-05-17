@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnowYourCyber Web APIs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="KnowYourCyber home">
+      <span class="brand-mark">KYC</span>
+      <span>KnowYourCyber</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#apis">APIs</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#security">Security</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Web API security intelligence</p>
+        <h1>KnowYourCyber Web APIs</h1>
+        <p class="hero-text">
+          Connect identity, asset, threat, and compliance signals through clean API endpoints built for modern security teams.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#apis">Explore APIs</a>
+          <a class="button secondary" href="#contact">Request Access</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Cyber API dashboard preview">
+        <img alt="Cyber API dashboard illustration" src="images/cyber-dashboard.jpg">
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Platform highlights">
+      <article>
+        <strong>99.9%</strong>
+        <span>API uptime target</span>
+      </article>
+      <article>
+        <strong>24/7</strong>
+        <span>Signal monitoring</span>
+      </article>
+      <article>
+        <strong>REST</strong>
+        <span>Simple integration model</span>
+      </article>
+    </section>
+
+    <section id="apis" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">API catalog</p>
+        <h2>Security data your products can act on</h2>
+      </div>
+
+      <div class="api-grid">
+        <article class="api-card">
+          <img alt="Identity verification icon" src="images/identity-risk.jpg">
+          <h3>Identity Risk API</h3>
+          <p>Score users, suppliers, and customers against cyber exposure indicators before access is granted.</p>
+          <button class="text-button" type="button" data-endpoint="/v1/identity/risk">View endpoint</button>
+        </article>
+
+        <article class="api-card">
+          <img alt="Threat intelligence icon" src="images/threat-signal.jpg">
+          <h3>Threat Signal API</h3>
+          <p>Feed applications with breach, malware, phishing, and suspicious domain intelligence.</p>
+          <button class="text-button" type="button" data-endpoint="/v1/threats/signals">View endpoint</button>
+        </article>
+
+        <article class="api-card">
+          <img alt="Compliance reporting icon" src="images/compliance-checks.jpg">
+          <h3>Compliance API</h3>
+          <p>Create auditable checks for cyber posture, policy coverage, and control evidence.</p>
+          <button class="text-button" type="button" data-endpoint="/v1/compliance/checks">View endpoint</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow-section">
+      <div class="section-heading">
+        <p class="eyebrow">Integration flow</p>
+        <h2>From request to actionable cyber insight</h2>
+      </div>
+
+      <div class="workflow">
+        <button class="step active" type="button" data-step="1">
+          <span>1</span>
+          Authenticate
+        </button>
+        <button class="step" type="button" data-step="2">
+          <span>2</span>
+          Query
+        </button>
+        <button class="step" type="button" data-step="3">
+          <span>3</span>
+          Respond
+        </button>
+      </div>
+
+      <div class="code-panel" aria-live="polite">
+        <pre><code id="codeSample"></code></pre>
+      </div>
+    </section>
+
+    <section id="security" class="section split-section">
+      <div>
+        <p class="eyebrow">Security first</p>
+        <h2>Built for controlled access and operational trust</h2>
+        <p>
+          The API layer is designed around scoped keys, consistent response formats, rate limits, and logging-friendly metadata.
+          Teams can connect the data into dashboards, onboarding flows, case management, or custom risk engines.
+        </p>
+      </div>
+      <ul class="feature-list">
+        <li>Scoped API tokens and environment separation</li>
+        <li>JSON responses designed for dashboards and automations</li>
+        <li>Clear status codes for integration handling</li>
+        <li>Security posture data for ongoing monitoring</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">Developer access</p>
+        <h2>Request a sandbox API key</h2>
+        <p>Use the form to prepare an access request. This demo validates the fields locally.</p>
+      </div>
+
+      <form class="contact-form" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Work email
+          <input type="email" name="email" placeholder="name@company.com" required>
+        </label>
+        <label>
+          API interest
+          <select name="interest" required>
+            <option value="">Choose an API</option>
+            <option>Identity Risk API</option>
+            <option>Threat Signal API</option>
+            <option>Compliance API</option>
+          </select>
+        </label>
+        <button class="button primary" type="submit">Prepare Request</button>
+        <p class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>KnowYourCyber Web APIs</span>
+    <span>Secure integrations for cyber-aware products</span>
+  </footer>
+
+  <div class="endpoint-modal" role="dialog" aria-modal="true" aria-labelledby="endpointTitle" hidden>
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="Close endpoint details">&times;</button>
+      <p class="eyebrow">Endpoint preview</p>
+      <h2 id="endpointTitle">API endpoint</h2>
+      <pre><code id="endpointCode"></code></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
